@@ -1,0 +1,227 @@
+/* 1. Variables: define colors once, reuse everywhere */
+:root {
+  --bg: #0f1419;
+  --surface: #1a2129;
+  --border: #2a343f;
+  --text: #e6edf3;
+  --muted: #8b98a5;
+  --accent: #2ecc71;
+}
+
+/* 2. Reset: browsers add default spacing, this removes the surprises */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+/* 3. Header and nav */
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+button {
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+button:hover {
+  border-color: var(--accent);
+}
+
+/* 4. Main content */
+main {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+/* 5. Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--surface);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+
+td:nth-child(2),
+th:nth-child(2) {
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:hover {
+  background-color: #222c36;
+}
+
+td:last-child {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+button.active {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #0f1419;
+  font-weight: bold;
+}
+
+.team-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.crest {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+:root {
+  --cl: #3b82f6;
+  --el: #f59e0b;
+  --conf: #22d3ee;
+  --playoff: #a78bfa;
+  --relegation: #ef4444;
+  --r16: #3b82f6;
+  --ko: #f59e0b;
+  --out: #ef4444;
+}
+
+.zone-cl td:first-child { box-shadow: inset 3px 0 0 var(--cl); }
+.zone-el td:first-child { box-shadow: inset 3px 0 0 var(--el); }
+.zone-conf td:first-child { box-shadow: inset 3px 0 0 var(--conf); }
+.zone-playoff td:first-child { box-shadow: inset 3px 0 0 var(--playoff); }
+.zone-relegation td:first-child { box-shadow: inset 3px 0 0 var(--relegation); }
+.zone-r16 td:first-child { box-shadow: inset 3px 0 0 var(--r16); }
+.zone-ko td:first-child { box-shadow: inset 3px 0 0 var(--ko); }
+.zone-out td:first-child { box-shadow: inset 3px 0 0 var(--out); }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  list-style: none;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 0.4rem;
+}
+
+a.team-cell {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.team-cell:hover span {
+  color: var(--accent);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.team-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-crest {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.info-grid a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+.squad-heading {
+  margin: 1.5rem 0 0.5rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.player-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+}

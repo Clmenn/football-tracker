@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Standings Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Football Standings Tracker</h1>
+    <nav>
+      <button data-league="premier">Premier League</button>
+      <button data-league="laliga">La Liga</button>
+      <button data-league="seriea">Serie A</button>
+      <button data-league="bundesliga">Bundesliga</button>
+      <button data-league="ligue1">Ligue 1</button>
+      <button data-league="ucl">Champions League</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="league-title"></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Team</th>
+          <th>P</th>
+          <th>W</th>
+          <th>D</th>
+          <th>L</th>
+          <th>GF</th>
+          <th>GA</th>
+          <th>GD</th>
+          <th>Pts</th>
+        </tr>
+      </thead>
+      <tbody id="standings-body"></tbody>
+    </table>
+    <ul class="legend" id="legend"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
