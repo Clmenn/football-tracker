@@ -225,3 +225,7 @@ a.team-cell:hover span {
   background-color: var(--surface);
   border-bottom: 1px solid var(--border);
 }
+
+.table-wrap {
+  overflow-x: auto;
+}
